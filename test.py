@@ -1,24 +1,23 @@
 from utils import  Color
-import draw
+from anim import Anim
+from shapes import Circle
 
 
 posy = 3
 vely = 0
 g = -1
+gor = Circle(radius= 0.2,color = Color.red)
 
 def anim_func(dt):
-    global posy,vely,g
-    image,pen=draw.init(640,360)
-    draw.line(pen,-5,-3,5,-3,color = Color.green)
-    draw.circle(pen,0,posy,radius = 0.4,color = Color.red)
+    global posy,vely,g,gor
+    gor.move_to(0,posy)
     vely += g*dt
     posy += vely*dt
     if posy < -3:
         posy = -3
         vely = -vely
-    return image
-
-draw.make_animation(anim_func)
+ani = Anim()
+ani.make_animation(anim_func)
 
 
 
