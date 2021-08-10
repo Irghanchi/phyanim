@@ -1,5 +1,6 @@
 from screen import Screen
 import cv2
+from tqdm import tqdm
 
 
 class Anim:
@@ -11,7 +12,7 @@ class Anim:
         t = duration*fps    
         sc = Screen()
         dt = 0.1                            
-        for i in range(t):     
+        for i in tqdm(range(t)):     
             func(dt)                        
             sc.draw_shapes()              
             image = sc.get_np_image(sc.image)                                           

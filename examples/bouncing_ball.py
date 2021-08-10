@@ -6,7 +6,7 @@ from shapes import Circle
 posy = 3
 vely = 0
 g = -1
-gor = Circle(radius= 0.2,color = Color.red)
+gor = Circle(radius= 2,color = Color.red)
 
 def anim_func(dt):
     global posy,vely,g,gor

@@ -23,7 +23,6 @@ class Screen:
     def draw_shapes(self):
         for i in reversed(Shapes.objlist):
             i.draw(self.pen)
-            print(i)
 
     def get_np_image(self,image):
         im= 0 + np.frombuffer(image.get_data(), np.uint8)

@@ -12,9 +12,9 @@ class Shapes:
         self.y = 0
         Shapes.objlist.append(self)
 
-    def move_to(self,x,y):
-        self.x = x
-        self.y = y
+    def move_to(self,pos):
+        self.x = pos[0]
+        self.y = pos[1]
 
     @classmethod
     def list_shapes(cls):
@@ -45,11 +45,11 @@ class Circle(Arc):
 
     def draw(self,pen):                     
         pen.arc(self.x,self.y,self.radius,0.0,2*3.14)                
-        pen.set_source_rgb(*self.color)     
+        pen.set_source_rgba(*self.color)     
         pen.fill()
 
 class Rectangle(Shapes):
-    def __init__(self,width=1.5,height=1,color=Color.white):
+    def __init__(self,width=1.5,height=1,color=Color.black):
         super().__init__(width = width,height = height,color = color)
 
 
