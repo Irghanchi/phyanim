@@ -17,8 +17,8 @@ class Screen:
         self.pen.scale(scalx,scaly)
         #del Shapes.objlist[0]
 
-    def write_to_png(self,path):
-        self.image.write_to_png(path)
+    #def write_to_png(self,filename):
+        #self.image.write_to_png(filename)
 
     def draw_shapes(self):
         for i in reversed(Shapes.objlist):

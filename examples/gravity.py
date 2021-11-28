@@ -16,7 +16,7 @@ def main(dt):
     earth.move_to(pos)
 
 ani = Anim()
-ani.make_animation(main,duration = 60)
+ani.make_animation(main,duration = 6)
 
 
 
